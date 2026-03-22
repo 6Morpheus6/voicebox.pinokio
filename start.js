@@ -7,7 +7,7 @@ module.exports = {
         path: "app",
         venv: "backend/env",
         message: [
-          "python -m uvicorn backend.main:app --port 17493 --reload"
+          "python -m uvicorn backend.main:app --port 17493"
         ],
         on: [{
           event: "/(http:\\/\\/\\S+)/",
@@ -30,7 +30,7 @@ module.exports = {
           VITE_SERVER_URL: "{{local.apiUrl}}"
         },
         message: [
-          "cd web && npm exec vite -- --config ../../web-vite.config.mjs"
+          "cd web && npm exec vite"
         ],
         on: [{
           event: "/(http:\\/\\/\\S+)/",

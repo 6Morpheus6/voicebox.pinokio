@@ -26,7 +26,8 @@ module.exports = {
         message: [
           "uv pip install --upgrade pip",
           "uv pip install -r requirements.txt",
-          "uv pip install hume-tada --no-deps"
+          "uv pip install hume-tada --no-deps",
+          "uv pip install chatterbox-tts --no-deps"
         ]
       }
     },
@@ -38,7 +39,8 @@ module.exports = {
         venv: "env",
         message: [
           "uv pip install --prerelease=allow -r requirements-mlx.txt",
-          "uv pip install hume-tada --no-deps"
+          "uv pip install hume-tada --no-deps",
+          "uv pip install chatterbox-tts --no-deps"
         ]
       }
     },

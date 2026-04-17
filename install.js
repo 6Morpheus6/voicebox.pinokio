@@ -53,6 +53,15 @@ module.exports = {
           "uv pip install git+https://github.com/QwenLM/Qwen3-TTS.git"
         ]
       }
+    },
+    {
+      when: "{{gpu === 'nvidia' && platform === 'win32' && kernel.gpu_model && / 50.+/.test(kernel.gpu_model) }}",
+      method: "shell.run",
+      params: {
+        path: "app/backend",
+        venv: "env",
+        message: "uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128 --force-reinstall --no-deps"
+      }
     }
   ]
 }

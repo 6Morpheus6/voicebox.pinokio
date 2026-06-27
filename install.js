@@ -14,6 +14,15 @@ module.exports = {
       params: {
         path: "app",
         message: [
+          "conda install -y -c conda-forge nodejs=24 openssl=3.6.2"
+        ]
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        path: "app",
+        message: [
           "npm install"
         ]
       }
